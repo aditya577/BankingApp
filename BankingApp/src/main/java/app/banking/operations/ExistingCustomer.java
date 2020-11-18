@@ -77,6 +77,7 @@ public class ExistingCustomer {
 			String txn_type = "Cr";
 			int account_number = bean.getAccount_number();
 			
+			//making objects for AccountBean and AccountStatementBean
 			bean = new AccountBean(bean.getAccount_number(), bean.getName(), balance);
 			AccountStatement asbean = new AccountStatement(date, txn_type, account_number, txn_amount, balance, mode);
 			
@@ -89,8 +90,6 @@ public class ExistingCustomer {
 				System.out.println("Transaction failed");
 				existingCustomer();
 			}
-			
-			//System.out.println(bean +"\n"+ asbean);
 			
 		}
 	}
@@ -136,6 +135,7 @@ public class ExistingCustomer {
 			String txn_type = "Dr";
 			int account_number = bean.getAccount_number();
 			
+			//making objects for AccountBean and AccountStatementBean
 			bean = new AccountBean(bean.getAccount_number(), bean.getName(), balance);
 			AccountStatement asbean = new AccountStatement(date, txn_type, account_number, txn_amount, balance, mode);
 			
@@ -148,8 +148,6 @@ public class ExistingCustomer {
 				System.out.println("Transaction failed");
 				existingCustomer();
 			}
-			
-			//System.out.println(bean +"\n"+ asbean);
 			
 		}
 	}

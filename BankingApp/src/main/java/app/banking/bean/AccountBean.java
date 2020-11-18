@@ -1,6 +1,8 @@
 package app.banking.bean;
 
-public class AccountBean{
+import java.io.Serializable;
+
+public class AccountBean implements Serializable{
 
 	/**
 	 * Columns for account.csv

@@ -104,20 +104,13 @@ public class CSVread {
 		
 		ArrayList<String> list =  readCSV(BankingConstants.ACCOUNT_CSV);
 		
-		/*
-		 * for(String e: list) System.out.println(e);
-		 */
-		
 		for (String e: list) {
-			//System.out.println(e);
 			String[] tokens = e.split(",");
 			if (tokens[1].equalsIgnoreCase(Quoted.qoute(bean.getName())) ) {
-				//System.out.println(tokens[1]);
 				abean = new AccountBean(Integer.parseInt(tokens[0]), tokens[1], Double.parseDouble(tokens[2]));
 				break;
 			}
 		}
-		//System.out.println(abean);
 		return abean;
 	}
 	
